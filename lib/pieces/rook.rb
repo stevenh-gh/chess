@@ -7,7 +7,15 @@ class Rook
     # "\u2656" "\u265c"
     @icon = type == 0 ? "\u2656" : "\u265c" # TODO: make module method out of this
     @pos = pos
-    @board = board
+    @board = board.board
+  end
+
+  #TODO: refactor into single line
+  def move(coord) # takes in array [x, y]
+    # add piece or icon to specified coordinates on board
+    x = coord[0] # get x coordinate
+    y = coord[1] # get y coordinate
+    board[x][y] = icon # set board[x][y] to icon
   end
 
   # private
