@@ -9,7 +9,11 @@ class Bishop
     @board = board.board
   end
 
-  #TODO: refactor this
+  def move(coord)
+    board[coord[0]][coord[1]] = icon
+  end
+
+  # TODO: refactor this
   def get_possible_moves
     possible_moves = {} # use hash to keep track of possible moves
     x = pos[0] # get x from pos
