@@ -10,12 +10,12 @@ class Rook
     @board = board.board
   end
 
-  #TODO: refactor into single line
+  # TODO: refactor into single line
   def move(coord) # takes in array [x, y]
     # add piece or icon to specified coordinates on board
     x = coord[0] # get x coordinate
     y = coord[1] # get y coordinate
-    board[x][y] = icon # set board[x][y] to icon
+    board[x][y] = self # set board[x][y] to self
   end
 
   # private
