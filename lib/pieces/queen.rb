@@ -11,7 +11,7 @@ class Queen
 
   # TODO: what if there was opponent piece or our piece at spot?
   def move(coord)
-    board[coord[0]][coord[1]] = icon
+    board[coord[0]][coord[1]] = self
   end
 
   def get_possible_moves
