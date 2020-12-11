@@ -9,6 +9,11 @@ class Queen
     @board = board.board
   end
 
+  # TODO: what if there was opponent piece or our piece at spot?
+  def move(coord)
+    board[coord[0]][coord[1]] = icon
+  end
+
   def get_possible_moves
     # the queen can has the moveset of both rook and bishop
     # taken from rook.rb and bishop.rb
