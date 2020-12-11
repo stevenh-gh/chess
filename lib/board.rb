@@ -11,7 +11,7 @@ class Board
       # print "#{idx + 1} " # row number
       print "#{idx} " # row number for debugging
       arr.each do |ele|
-        print "[#{ele}]"
+        print "[#{ele == ' ' ? ele : ele.icon}]"
       end
       puts
     end
