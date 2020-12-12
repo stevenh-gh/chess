@@ -12,6 +12,12 @@ class Pawn
     @first_move = false # to keep track whether pawn used its first move yet
   end
 
+  # TODO: a pawn can only capture diagonally
+  def move(coord)
+    board[coord[0]][coord[1]] = self
+    self.first_move = true unless first_move
+  end
+
   def get_possible_moves
     # -a pawn can only move one spot forward
     # -on the first move however, a pawn can move
